@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-from elements import validate_character_numeric_element
+from elements import validate_character_numeric_element, validate_text
 
 @given('estoy en la pagina de inicio de sesion2')
 def step_impl(context):
@@ -75,49 +75,30 @@ def step_impl(context):
 
 @then('el sistema muestra mensaje de bienvenida')
 def step_impl(context):
-    element_obtained = WebDriverWait(context.browser, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/app-welcome-home/div/div[1]/div/p")))
-    assert element_obtained.is_displayed(), "El mensaje de bienvenida no se muestra"
+    element_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/app-welcome-home/div/div[1]/div/p"
     expected_message = "Buen día JUAN DEMO!"  
-    assert element_obtained.text == expected_message
+    validate_text(context.browser, element_obtained, expected_message)
 
 @then('Vencido a hoy saldo en ARS')
 def step_impl(context):
-    select_element = WebDriverWait(context.browser, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[1]/app-number-values-card/div/div/div/div[3]/div/h4/span")))
-    valor = select_element.text
-    if re.search(r'\d', valor):
-        print(f'El valor es un carácter numérico. Valor: {valor}')
-        assert True, "El saldo a hoy es un valor numérico"
-    else:
-        print(f'El valor no es un carácter numérico. Valor: {valor}')
-        assert False, f"El saldo a hoy no es un valor numérico: {valor}"
+    select_element1 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[1]/app-number-values-card/div/div/div/div[3]/div/h4/span"
+    validate_character_numeric_element(context.browser,select_element1)
     time.sleep(2)
 
 @then('Vencido a hoy saldo en USD')
 def step_impl(context):
-    select_element = WebDriverWait(context.browser, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[2]/app-number-values-card/div/div/div/div[3]/div/h4/span")))
-    valor = select_element.text
-    if re.search(r'\d', valor):
-        print(f'El valor es un carácter numérico. Valor: {valor}')
-        assert True, "El saldo a hoy es un valor numérico"
-    else:
-        print(f'El valor no es un carácter numérico. Valor: {valor}')
-        assert False, f"El saldo a hoy no es un valor numérico: {valor}"
+    select_element2 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[2]/app-number-values-card/div/div/div/div[3]/div/h4/span"
+    validate_character_numeric_element(context.browser,select_element2)
     time.sleep(2)
 
 @then('A vencer saldo en USD')
 def step_impl(context):
-    select_element = WebDriverWait(context.browser, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[3]/app-number-values-card/div/div/div/div[3]/div/h4/span")))
-    valor = select_element.text
-    if re.search(r'\d', valor):
-        print(f'El valor es un carácter numérico. Valor: {valor}')
-        assert True, "El saldo a hoy es un valor numérico"
-    else:
-        print(f'El valor no es un carácter numérico. Valor: {valor}')
-        assert False, f"El saldo a hoy no es un valor numérico: {valor}"
+    select_element3 = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[3]/app-number-values-card/div/div/div/div[3]/div/h4/span"
+    validate_character_numeric_element(context.browser,select_element3)
     time.sleep(2)
 
 @then('A vencer saldo en ARS')
 def step_impl(context):
-    select_element =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[4]/app-number-values-card/div/div/div/div[3]/div/h4/span"
-    validate_character_numeric_element(context.browser,select_element)
+    select_element4 =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[1]/app-balances/div[2]/swiper/div/div[1]/div[4]/app-number-values-card/div/div/div/div[3]/div/h4/span"
+    validate_character_numeric_element(context.browser,select_element4)
     time.sleep(2)

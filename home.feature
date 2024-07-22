@@ -1,4 +1,4 @@
-Feature: ingreso al home y selecciono cuenta en el buscador global visualizo informacion en indicadores 
+Feature: ingreso al home y selecciono cuenta en el buscador global visualizar informacion en indicadores 
 
    @iniciarSesion2
   Scenario: Inicio de sesion exitoso2

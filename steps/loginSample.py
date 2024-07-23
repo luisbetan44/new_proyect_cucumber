@@ -1,4 +1,4 @@
-from behave import given, when, then
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,15 +9,15 @@ class LoginSteps:
     def __init__(self, browser):
         self.browser = browser
 
-    def navigate_to_login_page(self):
-        self.browser.get("https://pwa-portal-staging.silohub.ag/login")
-        print("Navegó a la página de inicio de sesión")
+    def navigate_to_login_page(self, url):
+        self.browser.get(url)
+        print(f"Navegó a la página de inicio de sesión: {url}")
 
-    def enter_credentials(self):
+    def enter_credentials(self, username, password):
         print("Buscando campo de email")
-        self.browser.find_element(By.ID, "email").send_keys("admingd@silohub.ag")
+        self.browser.find_element(By.ID, "email").send_keys(username)
         print("Buscando campo de contraseña")
-        self.browser.find_element(By.ID, "password").send_keys("G@viglio123")
+        self.browser.find_element(By.ID, "password").send_keys(password)
 
     def click_login_button(self):
         print("Buscando botón de inicio de sesión")

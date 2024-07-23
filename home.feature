@@ -11,6 +11,7 @@ Feature: ingreso al home y selecciono cuenta en el buscador global visualizar in
   Scenario: Selecciono el tenant2
     Given selecciono el tenant donde quiero ingresar2
     Then ingreso a la pagina de inicio2
+    
 
   @seleccionarcuenta
   Scenario: Seleccionar cuenta del productor

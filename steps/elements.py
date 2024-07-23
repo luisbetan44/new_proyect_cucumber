@@ -1008,6 +1008,19 @@ def validate_text(driver, xpath, valor_esperado):
     except TimeoutException:
         print(f"Tiempo de espera agotado. El texto por xpaht no está presente.")
 
+def validate_values_text(driver, xpath, valores_esperados):
+    try:
+        elemento = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, xpath))
+        )
+        valor = elemento.text
+        if valor in valores_esperados:
+            print(f"El texto encontrado es uno de los valores esperados: {valor}")
+        else:
+            print(f"El texto '{valor}' no fue encontrado en los valores esperados: {valores_esperados}")
+    except TimeoutException:
+        print(f"Tiempo de espera agotado. El elemento con xpath '{xpath}' no está presente.")
+
         
 
 def validate_text_css_selector(driver, css_selector, valor_esperado):

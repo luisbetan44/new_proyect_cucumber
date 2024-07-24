@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from elements import validate_character_numeric_element, validate_image_xpaht, validate_strt
+from elements import scroll_to_element, validate_character_numeric_element, validate_character_numeric_element_selector, validate_image_xpaht, validate_strt
 from loginHelper import LoginSteps3
 
 
@@ -56,8 +56,10 @@ def step_impl(context):
     time.sleep(5)
 
 @when('srollear hasta el centro de la pantalla')
-def scroll_to_element_center(browser):
-    browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+def step_impl(context):
+    element_scroll = "//span[text()='Entregas Recientes ']"
+    scroll_to_element(context.browser, element_scroll)
+    
 
 @given('validar imagen del producto entregado')
 def step_impl(context):
@@ -85,9 +87,9 @@ def step_impl(context):
     validate_character_numeric_element(context.browser, value_CTG_CRT)
     time.sleep(2)
 
-then('validar cantidad de kilos a entregar')
+@then('validar kilos a entregar')
 def step_impl(context):
-    value_KL_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[3]/div/div/span"
+    value_KL_delivery = '//*[@id="layout-wrapper"]/div/div/div/app-home/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[3]/div/div/span'
     validate_character_numeric_element(context.browser, value_KL_delivery)
     time.sleep(2)
 
@@ -117,9 +119,9 @@ def step_impl(context):
     validate_character_numeric_element(context.browser, value_KL_sales)
     time.sleep(2)
 
-then('validar precio de la venta')
+@then('validar precio de las ventas')
 def step_impl(context):
-    value_price = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[3]/div/div/span[2]"
-    validate_character_numeric_element(context.browser, value_price)
+    value_price = "#layout-wrapper > div > div > div > app-home > div > div:nth-child(4) > app-recent-grain-movements > div:nth-child(2) > div:nth-child(2) > app-recent-sales > app-responsive-table-multiple-items > div > table > tbody > tr:nth-child(1) > td:nth-child(3) > div > div > span:nth-child(2)"
+    validate_character_numeric_element_selector(context.browser, value_price)
     time.sleep(2)
 

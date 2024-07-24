@@ -1156,6 +1156,9 @@ def validate_character_numeric_element(driver, xpath):
     elemento = driver.find_element(By.XPATH, xpath)
     valor = elemento.text
 
+    # Desplazarse al elemento
+    driver.execute_script("arguments[0].scrollIntoView();", elemento)
+
     if re.search(r'\d', valor):
         print(f'El valor es un carácter numérico. Valor: {valor}')
     else:
@@ -1164,6 +1167,9 @@ def validate_character_numeric_element(driver, xpath):
 def validate_character_numeric_element_selector(driver, css_selector):
     elemento = driver.find_element(By.CSS_SELECTOR, css_selector)
     valor = elemento.text
+
+    # Desplazarse al elemento
+    driver.execute_script("arguments[0].scrollIntoView();", elemento)
 
     if re.search(r'\d', valor):
         print(f'El valor es un carácter numérico. Valor: {valor}')
@@ -1626,3 +1632,12 @@ def verify_and_click(driver, number_generate, xpath_number):
         print(f"Ha ocurrido un error al obtener o clicar en el elemento: {e}")
         return None
     
+def scroll_to_element(driver, xpaht):
+
+    try:
+        element = WebDriverWait(driver, 10).until(
+              EC.presence_of_element_located((By.XPATH, xpaht))
+        )
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+    except Exception as e:
+        print(f"Ha ocurrido un error al scrollear hasta el elemento: {e}")

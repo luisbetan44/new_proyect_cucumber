@@ -27,7 +27,7 @@ Feature: Home entregas y ventas
     Then validar descripcion y cosecha del producto a entregar
     And validar la fecha de la entrega
     And validar el numero de CTG/CRT de la entrega
-    And validar cantidad de kilos a entregar
+    And validar kilos a entregar   
 
   @ValidarVentasRecientes
   Scenario: validar las ventas recientes en el home
@@ -35,5 +35,5 @@ Feature: Home entregas y ventas
     Then validar descripcion y cosecha del producto a vender
     And validar la fecha de la vender
     And validar el cantidad kilos de la venta
-    And validar precio de la venta
+    And validar precio de las ventas
     

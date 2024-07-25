@@ -4,14 +4,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-class LoginSteps:
+class LoginSteps2:
 
     def __init__(self, browser):
         self.browser = browser
 
     def navigate_to_login_page(self, url):
         self.browser.get(url)
-        print(f"Navegó a la página de inicio de sesión: {url}")
+        print("Navegó a la página de inicio de sesión")
 
     def enter_credentials(self, username, password):
         print("Buscando campo de email")

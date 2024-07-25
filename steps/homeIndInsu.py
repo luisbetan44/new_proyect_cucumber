@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from elements import scroll_to_element, validate_character_numeric_element, validate_character_numeric_element_selector, validate_image_xpaht, validate_strt, validate_values_text
+from elements import scroll_to_element, validate_strt,validate_values_text
 from loginHelper import LoginSteps3
 
 
@@ -67,23 +67,23 @@ def step_impl(context):
     validate_values_text(context.browser, element_obtained,element_expected)
     time.sleep(2)
 
-@when('validar la cantidad del primer producto')
+@then('validar la cantidad del primer producto')
 def step_impl(context):
     selecct_element = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[1]/app-supplies-indicator/div/div[3]/div[1]/div[3]"
-    validate_character_numeric_element(context.browser, selecct_element )
+    validate_strt(context.browser, selecct_element )
     time.sleep(2)
 
-@when('validar el descripcion del segundo producto')
+@then('validar el descripcion del segundo producto')
 def step_impl(context):
     element_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[1]/app-supplies-indicator/div/div[3]/div[2]/div[2]"
     element_expected = ["Fertilizante","Agroquimico","Balanceado", "Semillas Hibrida", "Semillas Forrajeras", "Otros"]
     validate_values_text(context.browser, element_obtained,element_expected)
     time.sleep(2)
 
-@when('validar la cantidad del segundo producto')
+@then('validar la cantidad del segundo producto')
 def step_impl(context):
     selecct_element = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[1]/app-supplies-indicator/div/div[3]/div[2]/div[3]"
-    validate_character_numeric_element(context.browser, selecct_element )
+    validate_strt(context.browser, selecct_element )
     time.sleep(2)
 
 
@@ -94,23 +94,23 @@ def step_impl(context):
     validate_values_text(context.browser, element_obtained,element_expected)
     time.sleep(2)
 
-@when('validar la cantidad del primer producto remitido')
+@then('validar la cantidad del primer producto remitido')
 def step_impl(context):
     selecct_element = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[2]/app-supplies-indicator/div/div[3]/div[1]/div[3]"
-    validate_character_numeric_element(context.browser, selecct_element )
+    validate_strt(context.browser, selecct_element )
     time.sleep(2)
 
-@when('validar el descripcion del segundo producto remitido')
+@then('validar el descripcion del segundo producto remitido')
 def step_impl(context):
     element_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[2]/app-supplies-indicator/div/div[3]/div[2]/div[2]"
     element_expected = ["Fertilizantes","Agroquimicos","Balanceados", "Semillas Hibrida", "Semillas Forrajeras", "Otros"]
     validate_values_text(context.browser, element_obtained,element_expected)
     time.sleep(2)
 
-@when('validar la cantidad del segundo producto remitido')
+@then('validar la cantidad del segundo producto remitido')
 def step_impl(context):
     selecct_element = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[2]/app-supplies-indicator/div/div[3]/div[2]/div[3]"
-    validate_character_numeric_element(context.browser, selecct_element )
+    validate_strt(context.browser, selecct_element )
     time.sleep(2)
 
 @given('validar descripcion del  primer producto facturada')
@@ -120,21 +120,21 @@ def step_impl(context):
     validate_values_text(context.browser, element_obtained,element_expected)
     time.sleep(2)
 
-@when('validar la cantidad del primer producto facturada')
+@then('validar la cantidad del primer producto facturada')
 def step_impl(context):
     selecct_element = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[3]/app-supplies-indicator/div/div[3]/div[1]/div[3]"
-    validate_character_numeric_element(context.browser, selecct_element )
+    validate_strt(context.browser, selecct_element )
     time.sleep(2)
 
-@when('validar el descripcion del segundo producto facturada')
+@then('validar el descripcion del segundo producto facturada')
 def step_impl(context):
     element_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[3]/app-supplies-indicator/div/div[3]/div[2]/div[2]"
     element_expected = ["Fertilizante","Agroquimico","Balanceado", "Semillas Hibrida", "Semillas Forrajeras", "Otros"]
     validate_values_text(context.browser, element_obtained,element_expected)
     time.sleep(2)
 
-@when('validar la cantidad del segundo producto facturada')
+@then('validar la cantidad del segundo producto facturada')
 def step_impl(context):
     selecct_element = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[4]/app-supplies-goods-indicators/div[2]/swiper/div/div[1]/div[3]/app-supplies-indicator/div/div[3]/div[2]/div[3]"
-    validate_character_numeric_element(context.browser, selecct_element )
+    validate_strt(context.browser, selecct_element )
     time.sleep(2)

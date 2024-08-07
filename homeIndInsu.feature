@@ -13,7 +13,7 @@ Feature: Home indicadores de insumos
     Given selecciono el tenant donde quiero ingresar5
     Then ingreso a la pagina de inicio5
 
-  @seleccionarcuenta4
+  @seleccionarcuenta5
   Scenario: Seleccionar cuenta del productor5
     Given seleccionar al buscador global5
     When ingreso numero de cuenta en el buscador global5

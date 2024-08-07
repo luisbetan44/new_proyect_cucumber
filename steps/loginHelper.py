@@ -1,9 +1,8 @@
-from behave import given, when, then
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from elements import validate_character_numeric_element, validate_image_xpaht, validate_text, validate_values_text
+
 
 class LoginSteps3:
 

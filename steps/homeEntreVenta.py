@@ -4,6 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from elements import scroll_to_element, validate_character_numeric_element, validate_character_numeric_element_selector, validate_image_xpaht, validate_strt
+from features.credenciales import JUAN_DEMO, PASSWORD_ADMIN, USERNAME_ADMIN
+from features.selecctores import IMG_GRAIN_CORN, IMG_GRAIN_SOY, IMG_GRAIN_SUNFLOWER, IMG_GRAIN_WHEAT, PAGE_HOME_STAGING_GD_XPAHT
 from loginHelper import LoginSteps3
 
 
@@ -12,12 +14,12 @@ from loginHelper import LoginSteps3
 @given('estoy en la pagina de inicio de sesion4')
 def step_impl(context):
     login_steps = LoginSteps3(context.browser)
-    login_steps.navigate_to_login_page("https://pwa-portal-staging.silohub.ag/login")
+    login_steps.navigate_to_login_page(PAGE_HOME_STAGING_GD_XPAHT)
 
 @when('ingreso mi nombre de usuario y credenciales correctas4')
 def step_impl(context):
     login_steps = LoginSteps3(context.browser)
-    login_steps.enter_credentials("admingd@silohub.ag", "G@viglio123")
+    login_steps.enter_credentials(USERNAME_ADMIN, PASSWORD_ADMIN)
 
 @when('hago clic en el boton de inicio de sesion4')
 def step_impl(context):
@@ -47,7 +49,7 @@ def step_impl(context):
 @when('ingreso numero de cuenta en el buscador global4')
 def step_impl(context):
     login_steps = LoginSteps3(context.browser)
-    login_steps.enter_account_number("1023")
+    login_steps.enter_account_number(JUAN_DEMO)
 
 @when('hago clic en la opción desplegada correspondiente4')
 def step_impl(context):
@@ -64,10 +66,7 @@ def step_impl(context):
 @given('validar imagen del producto entregado')
 def step_impl(context):
     img_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[1]/div/div/div[1]/img"
-    img_expected = ["https://pwa-portal-staging.silohub.ag/assets/images/grains/trigo.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/maiz.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/girasol.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/soja.svg"]
+    img_expected = [IMG_GRAIN_WHEAT, IMG_GRAIN_CORN, IMG_GRAIN_SUNFLOWER, IMG_GRAIN_SOY]
     validate_image_xpaht(context.browser, img_obtained, img_expected)
 
 @then('validar descripcion y cosecha del producto a entregar')
@@ -96,10 +95,7 @@ def step_impl(context):
 @given('validar imagen del producto vender')
 def step_impl(context):
     img_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[1]/div/div/div[1]/img"
-    img_expected = ["https://pwa-portal-staging.silohub.ag/assets/images/grains/trigo.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/maiz.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/girasol.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/soja.svg"]
+    img_expected = [IMG_GRAIN_WHEAT, IMG_GRAIN_CORN,IMG_GRAIN_SUNFLOWER,IMG_GRAIN_SOY]
     validate_image_xpaht(context.browser, img_obtained, img_expected)
 
 @then('validar descripcion y cosecha del producto a vender')

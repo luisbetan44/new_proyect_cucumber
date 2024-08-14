@@ -30,9 +30,11 @@ Feature: flujo de granos contratos
     And ingresar cantidad de kilos
     And seleccionar moneda
     And ingresar precio
+    And scrollear en la pantalla 
     And seleccionar pizarra
     And seleccionar codigo estandar
-    And seleccionar fecha de pago
+    And seleccionar fecha de pago 
+    And scrollear hacia arriba de la pantalla 
     And seleccionar fecha de entrega
     And seleccionar planta
     And seleccionar procedencia
@@ -44,7 +46,8 @@ Feature: flujo de granos contratos
   Scenario: seleccionar todos los botones para generar el contyrato
     Given seleccionar boton crear
     When seleccionar boton confirmar
-    And seleccionar boton aceptar
-    Then validar mensaje de finalizacion   
+    Then validar mensaje de finalizacion
+    When seleccionar boton aceptar
+       
 
   

@@ -1519,7 +1519,7 @@ def calendar_todate_retro(driver, input_xpath, popup_xpath, chevron_xpath, popup
             back_button.click()
             time.sleep(1)  # Esperar un segundo para que el calendario se actualice
         except Exception as e:
-            print(f"No se pudo hacer clic en el botón de retroceso en el intento {i+1}.")
+            print(f"No se pudo hacer clic en el botón de chevron en el intento {i+1}.")
             print(e)
             return
 
@@ -1535,7 +1535,7 @@ def calendar_todate_retro(driver, input_xpath, popup_xpath, chevron_xpath, popup
         )
         dia_elemento.click()
     except Exception as e:
-        print(f"El día {dia_actual} no está disponible en el calendario después de retroceder meses.")
+        print(f"El día {dia_actual} no está disponible en el calendario después de hacer clic la cantidad de veces.")
         print(e)
 
 def  select_previous_day(driver, popup_xpath):

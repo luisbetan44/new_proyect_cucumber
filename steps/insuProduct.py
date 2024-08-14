@@ -5,8 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from elements import delete_element, displace_element, find_elements, find_elements_id, find_send_element, search_and_select_option, select_option_click, send_element, validate_text,validate_text_by_text
 from elements2 import verify_todate
-from features.credenciales import PASSWORD_COMERCIAL, USERNAME_COMERCIAL
-from features.selecctores import PAGE_HOME_STAGING_GD_XPAHT
+from features.selecctores import PAGE_HOME_STAGING_GD_XPAHT, PASSWORD_COMERCIAL, USERNAME_COMERCIAL
 from loginSample import LoginSteps2
 
 

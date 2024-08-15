@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from elements import delete_element, displace_element, find_elements, find_elements_id, find_send_element, search_and_select_option, select_option_click, send_element, validate_text,validate_text_by_text
 from elements2 import verify_todate
-from features.selecctores import PAGE_HOME_STAGING_GD_XPAHT, PASSWORD_COMERCIAL, USERNAME_COMERCIAL
 from loginSample import LoginSteps2
 
 
@@ -15,12 +14,12 @@ from loginSample import LoginSteps2
 @given('estoy en la pagina de inicio de sesion7')
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
-    login_steps.navigate_to_login_page(PAGE_HOME_STAGING_GD_XPAHT)
+    login_steps.navigate_to_login_page("https://pwa-portal-staging.silohub.ag/login")
 
 @when('ingreso mi nombre de usuario y credenciales correctas7')
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
-    login_steps.enter_credentials(USERNAME_COMERCIAL, PASSWORD_COMERCIAL)
+    login_steps.enter_credentials("comercialgd@silohub.ag", "G@viglio123")
 
 @when('hago clic en el boton de inicio de sesion7')
 def step_impl(context):

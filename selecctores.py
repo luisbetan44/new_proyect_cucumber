@@ -30,5 +30,34 @@ class Selecctores:
   SCROLLHEIGHT = "window.scrollTo(0, document.body.scrollHeight);"
 
   SCROLLUP = "window.scrollTo(0, 0);"
-                 
+
+  # selectores de menu 
+
+  SELECT_MENU_GRAIN_XPAHT = '//span[text() =" Granos"]'
+
+# selectores de submenu
+
+  SELECT_SUBMENU_CONTRACT_XPAHT = '//a[text()=" Contratos "]'
+
+
+# selectores de la pantalla de granos contrato 
+
+# validaciones de texto en las pantalla granos contratos
+  VALIDATE_TITLE_GRAIN_CONTRACT_TEXT = "CONTRATOS"
+
+  # cargar opción de tipo de confirmación
+
+  SELECT_DROPDOWN_TYPE_CONFIRM_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[2]/div[2]/ng-select/div/span"
+
+  SELECT_OPTION_CONFIRM_XPAHT = "//span[text()=' (VT) Confirmación De Venta ']"
+
+
+  #seleccionar cuenta en el buscador granos contratos 
+
+  SEARCH_ACCOUNT_IN_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[3]/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
+
+  INSERT_ACCOUNT_IN_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[3]/div[2]/div/app-customer-searcher/ng-select/div/div/div[2]/input"
+
+  SELECT_ACCOUNT_IN_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[3]/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
+               
                     

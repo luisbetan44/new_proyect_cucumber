@@ -18,12 +18,26 @@ Feature: flujo de granos contratos
     When seleccionar submenu de contratos
     Then velidar titulo de la pagina
   
-  @IngresarDatosRequeridosFormulario
+  @IngresarDatosFormularioIzquierdo
   Scenario:
     Given seleccionar tipo de confirmacion 
     When ingresar cuenta productor
     And seleccionar cuenta productor
-       
+    And seleccionar la especie
+    And seleccionar cosecha
+    And ingresar cantidad 
+    And seleccionar modena
+    And scrollear la pantalla
+    And ingresar precio
+    And seleccionar pizarra
+    And seleccionar codigo standar
+    And seleccionar fecha de pago  
+  
+  @IngresarDatosFormularioDerecho
+  Scenario:
+    Given scrollear hacia principio de la pantalla 
+    When ingresar fecha de entrega 
+    
 
   
 

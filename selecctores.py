@@ -27,9 +27,15 @@ class Selecctores:
 
   INSERT_AMOUNT_PRICE = "3000"
 
+  CLICK_CHEVRON_ONE = 3
+
+  CLICK_CHEVRON_TWO = 6
+
   SCROLLHEIGHT = "window.scrollTo(0, document.body.scrollHeight);"
 
   SCROLLUP = "window.scrollTo(0, 0);"
+
+  SCROLLSAMPLE = "window.scrollBy(0, 250);"
 
   # selectores de menu 
 
@@ -60,4 +66,55 @@ class Selecctores:
 
   SELECT_ACCOUNT_IN_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[3]/div[2]/div/app-customer-searcher/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
                
-                    
+# seleccionar especia             
+
+  SELECT_DROPDOWN_SPECIES_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[4]/div[2]/ng-select/div/span"
+  
+  SELECT_OPTION_SPECIES_GRAIN_CONTRACT_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[4]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[14]'
+
+  # seleccionar cosecha
+  SELECT_DROPDOWN_HARVEST_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[5]/div[2]/ng-select/div/span"
+  
+  SELECT_OPTION_HARVEST_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[5]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
+
+# seleccionar input de cantidad 
+
+  SELECT_INPUT_AMOUNT_KILOS_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div/app-input-for-long-form[1]/div/div[2]/div/input"
+
+# seleccionar tipo de moneda 
+#   
+  SELECT_DROPDOWN_TYPE_MONEY_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[6]/div[2]/ng-select/div/span"
+
+  SELECT_OPTION_TYPE_MONEY_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[6]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span"
+
+# ingresar precio 
+
+  SELECT_INPUT_PRICE_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/app-input-for-long-form[2]/div/div[2]/div/input"
+
+# seleccionar pizarra 
+
+  SELECT_DROPDOWN_BOARD_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[7]/div[2]/ng-select/div/span"
+
+  SELECT_OPTION_BOARD_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[7]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[2]/span"
+
+# seleccionar codigo estandar
+
+  SELECT_DROPDOWN_CODE_STANDARD_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[8]/div[2]/ng-select/div/span"
+
+  SELECT_OPTION_CODE_STANDARD_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[1]/div[8]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div/span"
+
+# seleccionar fecha de pago 
+
+  SELECT_CALENDAR_DATA_PAY_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[1]/div[2]/div[2]/app-date-picker/div/input[2]"
+
+  SELECT_DAY_CALENDAR_GRAIN_CONTRACT_XPAHT = "//div[contains(@class, 'flatpickr-calendar')]" 
+
+  #seleccionar fecha entrega 
+
+  SELECT_CALENDAR_DELIVERY_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[1]/div[2]/app-date-picker/div/input[2]"
+
+  SELECT_ARROW_CALENDAR_GRAIN_CONTRACT_XPAHT = "/html/body/div[5]/div[1]/span[2]"
+
+  SELECT_DATE_CALENDAR_DELIVERY = "//span[contains(@class, 'flatpickr-day') and @aria-current='date']"
+
+

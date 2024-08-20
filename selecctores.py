@@ -115,6 +115,7 @@ class Selecctores:
 
   SELECT_ARROW_CALENDAR_GRAIN_CONTRACT_XPAHT = "/html/body/div[5]/div[1]/span[2]"
 
-  SELECT_DATE_CALENDAR_DELIVERY = "//span[contains(@class, 'flatpickr-day') and @aria-current='date']"
-
+  SELECT_DATE_CALENDAR_DELIVERY_ONE = '/html/body/div[5]/div[2]/div/div[2]/div/span[4]'
+ 
+  SELECT_DATE_CALENDAR_DELIVERY_TWO = '/html/body/div[5]/div[2]/div/div[2]/div/span[33]'
 

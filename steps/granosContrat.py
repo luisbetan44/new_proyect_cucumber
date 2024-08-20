@@ -1,7 +1,7 @@
 
 import time
 from behave import given, when, then
-from elements import calendar_todate, calendar_todate_retro, find_elements, find_send_element,search_and_displace_account, select_option_click, validate_text_by_text
+from elements import calendar_todate, calendar_todate_retro, displace_element, find_and_click_element, find_elements, find_elements_css_selector, find_send_element,search_and_displace_account, select_option_click, validate_text_by_text
 from selecctores import Selecctores
 from loginSample import LoginSteps2
 from credenciales import Credenciales  
@@ -40,7 +40,8 @@ scrollup = Selecctores.SCROLLUP
 selectDateDelivery = Selecctores.SELECT_CALENDAR_DELIVERY_GRAIN_CONTRACT_XPAHT
 selectArrowCalendar = Selecctores.SELECT_ARROW_CALENDAR_GRAIN_CONTRACT_XPAHT
 clickChevron = Selecctores.CLICK_CHEVRON_ONE
-selectTodateDelivery = Selecctores.SELECT_DATE_CALENDAR_DELIVERY
+selectTodateDelivery1 = Selecctores.SELECT_DATE_CALENDAR_DELIVERY_ONE
+selectTodateDelivery2 = Selecctores.SELECT_DATE_CALENDAR_DELIVERY_TWO
 
 @given('estoy en la pagina de inicio de sesion8')
 def step_impl(context):
@@ -182,14 +183,24 @@ def step_impl(context):
 
 @when("ingresar fecha de entrega")
 def step_impl(context):
-    select_calendar = selectDateDelivery
-    popup_xpath = selectTodateDelivery
-    select_chevron = selectArrowCalendar
-    popup_xpath2 = selectTodateDelivery
-    click_chevron = clickChevron
-    calendar_todate_retro(context.browser, select_calendar, popup_xpath, select_chevron, popup_xpath2, clicks=click_chevron)
-    time.sleep(2)
+     select_calendar = selectDateDelivery
+     displace_element(context.browser, select_calendar)
+     time.sleep(2)
 
+     select_calendar = selectTodateDelivery1
+     find_elements(context.browser, select_calendar)
+     time.sleep(1)
 
+     select_arrow2 = selectArrowCalendar
+     clicks = clickChevron
+     find_and_click_element(context.browser, select_arrow2, clicks) 
+     time.sleep(2)
+
+     select_calendar = selectTodateDelivery2
+     find_elements(context.browser, select_calendar)
+     time.sleep(1)
+     
+     
+     
  
  

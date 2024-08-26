@@ -31,12 +31,32 @@ Feature: flujo de granos contratos
     And ingresar precio
     And seleccionar pizarra
     And seleccionar codigo standar
-    And seleccionar fecha de pago  
+    And seleccionar fecha de pago
+    And scrollear hacia principio de la pantalla
+    
+  @IngresarOtrosDatos
+  Scenario: 
+    Given seleccionar chevron
+    When seleccionar opcion prima de contrato
+    And seleccionar tipo prima de contrato  
+    And seleccionar tipo de moneda 
+    And ingresar importe
+    And agreagr prima
+    And aceptar ingreso de prima 
   
   @IngresarDatosFormularioDerecho
   Scenario:
-    Given scrollear hacia principio de la pantalla 
-    When ingresar fecha de entrega 
+    Given ingresar fecha de entrega
+    When seleccionar planta
+    And seleccionar procedencia
+    And seleccionar destino
+    And seleccionar fecha de fijacion desde 
+    And seleccionar fecha de fijacion hasta
+    And hacer click boton crear confirm de venta 
+    And hacer click boton confirmar 
+    And hacer click boton aceptar la confirmacion
+    Then validar mensaje de extito     
+  
     
 
   

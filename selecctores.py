@@ -33,7 +33,7 @@ class Selecctores:
 
   SCROLLHEIGHT = "window.scrollTo(0, document.body.scrollHeight);"
 
-  SCROLLUP = "window.scrollTo(0, 0);"
+  SCROLLUP = "window.scrollTo(0, -500);"
 
   SCROLLSAMPLE = "window.scrollBy(0, 250);"
 
@@ -50,6 +50,8 @@ class Selecctores:
 
 # validaciones de texto en las pantalla granos contratos
   VALIDATE_TITLE_GRAIN_CONTRACT_TEXT = "CONTRATOS"
+
+  VALIDATE_TITLE_SUCCESSE_GRAIN_CONTRACT_TEXT = "Confirmación de venta generada con éxito."
 
   # cargar opción de tipo de confirmación
 
@@ -119,3 +121,54 @@ class Selecctores:
  
   SELECT_DATE_CALENDAR_DELIVERY_TWO = '/html/body/div[5]/div[2]/div/div[2]/div/span[33]'
 
+  # seleccionar otras opciones 
+
+  SELECT_OTHERS_OPTION_CHEVRON_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/div/app-select-premiun/div/div/button/img"
+
+  SELECT_PREMIUMS_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/div/app-select-premiun/div/div/div/li[1]/a"
+
+  SELECT_DROPDOWN_PREMIUMS_GRAIN_CONTRACT_XPAHT = "/html/body/ngb-modal-window/div/div/app-modal-contract-premiun/div[2]/div[2]/div/form/div[1]/div[1]/app-premiun-list/ng-select/div/div/div[2]/input"
+
+  SELECT_OPTION_PREMIUMS_GRAIN_CONTRACT_XPAHT = "/html/body/ngb-modal-window/div/div/app-modal-contract-premiun/div[2]/div[2]/div/form/div[1]/div[1]/app-premiun-list/ng-select/ng-dropdown-panel/div/div[2]/div[2]/span"
+
+  SELECT_MONEY_PREMIUMS_GRAIN_CONTRACT_XPAHT = "/html/body/ngb-modal-window/div/div/app-modal-contract-premiun/div[2]/div[2]/div/form/div[1]/div[2]/ng-select/div/span"
+
+  INSERT_MONEY_PREMIUMS_GRAIN_CONTRACT_XPAHT = "/html/body/ngb-modal-window/div/div/app-modal-contract-premiun/div[2]/div[2]/div/form/div[1]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[2]"
+
+  INSERT_AMOUNT_VALUE_GRAIN_CONTRACT_XPAHT = "/html/body/ngb-modal-window/div/div/app-modal-contract-premiun/div[2]/div[2]/div/form/div[1]/div[3]/input"
+
+  ADD_PREMIUMS_GRAIN_CONTRACT_XPAHT = "/html/body/ngb-modal-window/div/div/app-modal-contract-premiun/div[2]/div[2]/div/form/div[1]/div[4]/button/img"
+
+  ACCEPT_PREMIUMS_GRAIN_CONTRACT_XPAHT = "/html/body/ngb-modal-window/div/div/app-modal-contract-premiun/div[2]/div[2]/div/div/div/div/app-button[2]/button"
+
+# seleccionar planta 
+
+  SELECT_PLANT_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[2]/div[2]/app-search-selector/ng-select"
+
+  SELECT_OPTION_PLANT_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[2]/div[2]/app-search-selector/ng-select/ng-dropdown-panel/div/div[2]/div[2]/span"
+  
+  SELECT_ORIGIN_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[3]/div[2]/app-search-selector/ng-select/div/div/div[2]/input"
+
+  SELECT_OPTION_ORIGIN_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[3]/div[2]/app-search-selector/ng-select/ng-dropdown-panel/div/div[2]/div[3]/span"
+
+  SELECT_DESTINATION_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[4]/div[2]/app-search-selector/ng-select/div/div/div[2]/input"
+
+  SELECT_OPTION_DESTINATION_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[2]/div/div[4]/div[2]/app-search-selector/ng-select/ng-dropdown-panel/div/div[2]/div[6]/span"
+
+  # seleccionar fecha de fijacion 
+
+  SELECT_CALENDAR_FIXATION_FROM_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[4]/div[2]/app-date-picker/div/input[2]"
+   
+  SELECT_TODATE_FIXATION_FROM_GRAIN_CONTRACT_XPAHT = "/html/body/div[2]/div[2]/div/div[2]/div/span[30]" 
+
+  SELECT_CALENDAR_FIXATION_UNTIL_GRAIN_CONTRACT_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[1]/form/div/div[2]/div[5]/div[2]/app-date-picker/div/input[2]"
+  
+  SELECT_TODATE_FIXATION_UNTIL_GRAIN_CONTRACT_XPAHT = "/html/body/div[3]/div[2]/div/div[2]/div/span[31]" 
+
+  SELECT_BUTTON_CREATE_XPAHT = "//button[contains(text(), 'Crear')]"
+
+  SELECT_BUTTON_CONFIRM = "/html/body/div[6]/div/div[6]/button[3]"
+
+  SELECT_RESPONSE_MESSAGE = "/html/body/div[6]/div/h2"
+
+  SELECT_BUTTON_ACCEPT = "/html/body/div[6]/div/div[6]/button[1]"

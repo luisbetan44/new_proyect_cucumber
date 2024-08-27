@@ -165,7 +165,7 @@ class Selecctores:
   
   SELECT_TODATE_FIXATION_UNTIL_GRAIN_CONTRACT_XPAHT = "/html/body/div[3]/div[2]/div/div[2]/div/span[31]" 
 
-  SELECT_BUTTON_CREATE_XPAHT = "//button[contains(text(), 'Crear')]"
+  SELECT_BUTTON_CREATE_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-sale-confirmation-main/div/div[1]/app-contract-form/div[2]/app-button[2]/button"
 
   SELECT_BUTTON_CONFIRM = "/html/body/div[6]/div/div[6]/button[3]"
 

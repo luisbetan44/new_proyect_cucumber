@@ -1,12 +1,18 @@
 
 import time
 from behave import given, when, then
-from elements import calendar_todate, displace_element, find_and_click_element, find_elements, find_elements_css_selector, find_elements_id,find_send_element,search_and_displace_account, select_option_click, validate_text, validate_text_by_text
+from elements import calendar_todate, displace_element, find_and_click_element, find_elements,find_send_element,search_and_displace_account, select_option_click, validate_text, validate_text_by_text
+from textSteps import TextSteps
 from selecctores import Selecctores
 from loginSample import LoginSteps2
 from credenciales import Credenciales  
  
-
+startSession = TextSteps.START_SESSION
+insertUsermanePassword = TextSteps.INSERT_USERNAME_AND_PASSWORD
+clickOnTheButtonSession = TextSteps.CLICK_ON_THE_BUTTON_SESSION
+redirrectMeToMainPage = TextSteps.REDIRRECT_ME_TO_THE_MAIN_PAGE
+selectTenantWhereIwantToEnter = TextSteps.SELECT_TENANT_WHERE_I_WANT_TO_ENTER
+enterTheHomePage = TextSteps.ENTER_THE_HOME_PAGE 
 username = Credenciales.USERNAME_COMERCIAL_GD
 password = Credenciales.PASSWORD_COMERCIAL_GD
 url = Selecctores.PAGE_HOME_STAGING_GD_XPAHT
@@ -37,6 +43,7 @@ selectCalendarDatePay = Selecctores.SELECT_CALENDAR_DATA_PAY_GRAIN_CONTRACT_XPAH
 selectDayCalendar = Selecctores.SELECT_DAY_CALENDAR_GRAIN_CONTRACT_XPAHT
 scrollElement = Selecctores.SCROLLSAMPLE
 scrollup = Selecctores.SCROLLUP
+scrollHeight = Selecctores.SCROLLHEIGHT
 selectDateDelivery = Selecctores.SELECT_CALENDAR_DELIVERY_GRAIN_CONTRACT_XPAHT
 selectArrowCalendar = Selecctores.SELECT_ARROW_CALENDAR_GRAIN_CONTRACT_XPAHT
 clickChevron = Selecctores.CLICK_CHEVRON_ONE
@@ -71,32 +78,32 @@ selectButtonAccept = Selecctores.SELECT_BUTTON_ACCEPT
 
 
 
-@given('estoy en la pagina de inicio de sesion8')
+@given(startSession)
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
     login_steps.navigate_to_login_page(url)
 
-@when('ingreso mi nombre de usuario y credenciales correctas8')
+@when(insertUsermanePassword)
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
     login_steps.enter_credentials(username,password)
 
-@when('hago clic en el boton de inicio de sesion8')
+@when(clickOnTheButtonSession)
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
     login_steps.click_login_button()
 
-@then('deberia ser redirigido a la pagina principal8')
+@then(redirrectMeToMainPage)
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
     login_steps.verify_redirection_to_home()
 
-@given('selecciono el tenant donde quiero ingresar8')
+@given(selectTenantWhereIwantToEnter)
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
     login_steps.select_tenant()
 
-@then('ingreso a la pagina de inicio8')
+@then(enterTheHomePage)
 def step_impl(context):
     login_steps = LoginSteps2(context.browser)
     login_steps.verify_redirection_to_inicio()
@@ -315,6 +322,12 @@ def step_impl(context):
     find_elements(context.browser, popup_calendar3)
     time.sleep(2)
 
+@when ("scrollear hasta el boton crear")
+def step_impl(context):
+    driver = context.browser
+    driver.execute_script(scrollHeight)
+    time.sleep(2) 
+
 @when ("hacer click boton crear confirm de venta")
 def step_impl(context):
     select_button_create = selectButtonCreate
@@ -331,7 +344,7 @@ def step_impl(context):
 def step_impl(context):
     select_finish = selectButtonAccept
     find_elements(context.browser, select_finish)
-    time.sleep(3)
+    time.sleep(5)
 
 @then ("validar mensaje de extito")
 def step_impl(context):

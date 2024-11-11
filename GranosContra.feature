@@ -1,19 +1,20 @@
 Feature: flujo de granos contratos 
 
-  @iniciarSesion8
+  @iniciarSesion
   Scenario: Inicio de sesion exitoso
-    Given estoy en la pagina de inicio de sesion 8
-    When ingreso mi nombre de usuario y credenciales correctas 8
-    And hago clic en el boton de inicio de sesion 8
-    Then deberia ser redirigido a la pagina principal 8
+    Given estoy en la pagina de inicio de sesion 
+    When ingreso mi nombre de usuario y credenciales correctas 
+    And hago clic en el boton de inicio de sesion 
+    Then deberia ser redirigido a la pagina principal 
 
   @seleccionartenat8
   Scenario: Selecciono el tenant
-    Given selecciono el tenant donde quiero ingresar 8
-    Then ingreso a la pagina de inicio 8
+    Given selecciono el tenant donde quiero ingresar 
+    Then ingreso a la pagina de inicio 
 
   @seleccionarMenuGranosContratos
   Scenario: Ingresar en el menu de granos contratos
+  
     Given seleccionar menu de granos
     When seleccionar submenu de contratos
     Then velidar titulo de la pagina

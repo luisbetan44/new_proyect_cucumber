@@ -79,3 +79,24 @@ def calendar_todate_advance(driver, input_xpath, popup_xpath, chevron_xpath, pop
     except Exception as e:
         print(f"El día {dia_actual} no está disponible en el calendario después de avanzar meses.")
         print(e)
+def validate_character_string_element(driver, xpath):
+    elemento = driver.find_element(By.XPATH, xpath)
+    valor = elemento.text.strip()  # Elimina posibles espacios en blanco al inicio o al final
+
+    if valor.isalpha():
+        print(f'El valor es un carácter alfabético. Valor: {valor}')
+    else:
+        print(f'El valor es un string. Valor: {valor}')
+
+def download_pdf(driver, download_PDF_xpath, timeout=10):
+    
+    wait = WebDriverWait(driver, timeout)
+
+    try:
+        # Esperar hasta que el enlace de descargar PDF sea clicable
+        pdf_element = wait.until(EC.element_to_be_clickable((By.XPATH, download_PDF_xpath)))
+        
+        # Ejecutar clic mediante JavaScript
+        driver.execute_script("arguments[0].click();", pdf_element)
+    except Exception as e:
+         print(f"Error al encontrar o hacer clic en el elemento: {e}")

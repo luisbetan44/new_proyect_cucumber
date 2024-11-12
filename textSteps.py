@@ -34,3 +34,32 @@ class TextSteps:
 
     HELPER_CLICK_OPTION_ACCOUNT = 'hago clic en la opción desplegada correspondiente'
 
+## pasos resumen de entregas y ventas en el home 
+
+
+## entrega
+ 
+    SCROLLEAR_PAGE_DELVERIES_HOME = "scrollear hasta reporte de entregas del home" 
+    VALUE_TITLE_PEGE_DELIVERIES_HOME = "validar titulo de la pagina en el home"
+    VALUE_TITLE_MODULE_DELIVERIES_HOME = "validar titulo del reporte de entregas del home"
+    VALUE_TITLE_PAGE_PRODCUT_DELIVERIES_HOME = "validar descripcion del producto en el reporte de entregas del home"
+    VALUE_IMG_PRUDUCT_DELIVERIES_HOME = "Validar imagen del producto del reporte de entregas del home"
+    VALUE_HARVEST_DELIVERIES_HOME = "validar cosecha en el reporte de entregas del home"
+    VALUE_DATE_DELIVERIES_HOME = "validar fecha del reporte de entregas del home"
+    VELUE_CTG/CRT_DELIVERIES_HOME ="validar titulo CTG/CRT del reporte de entregas del home"
+    GET_VELUE_CTG/CRT_DELIVERIES_HOME ="obtener valor CTG/CRT del reporte de entregas en el home"
+     "validar titulo Kg Netos del reporte de entregas en el home"
+    "obtener valor Kg Netos del reporte de entregas en el home"
+
+ ## ventas
+
+    "validar titulo del modulo3"
+    "validar titulo de pagina de productos3"
+    "Validar imagen del producto3"
+    "validar cosecha3"
+    "validar fecha3" 
+    "validar titulo Kg Netos3"
+    "obtener valor Kg Netos3"
+    "validar titulo precio3"
+    "obtener precio3"
+    "obtener valor final3" 

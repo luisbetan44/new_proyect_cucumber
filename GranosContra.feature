@@ -7,7 +7,7 @@ Feature: flujo de granos contratos
     And hago clic en el boton de inicio de sesion 
     Then deberia ser redirigido a la pagina principal 
 
-  @seleccionartenat8
+  @seleccionartenat
   Scenario: Selecciono el tenant
     Given selecciono el tenant donde quiero ingresar 
     Then ingreso a la pagina de inicio 

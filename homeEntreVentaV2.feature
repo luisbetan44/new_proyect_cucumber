@@ -15,36 +15,36 @@ Feature: Home entregas y ventas
 
   @seleccionarcuenta4
   Scenario: Seleccionar cuenta del productor
-    Given seleccionar al buscador global
-    When ingreso numero de cuenta en el buscador global
-    And hago clic en la opción desplegada correspondiente
-    And srollear hasta el centro de la pantalla 
+    Given seleccionar al buscador global para el reporte de entregas y ventas
+    When ingreso numero de cuenta en el buscador global para el reporte de entregas y ventas
+    And seleccionar la opción desplegada correspondiente para el reporte de entregas y ventas
+   
     
 
   @ValidarEntregasRecientes
   Scenario: validar las entregas recientes en el home
-    Given scrollear pantalla 
-    Then validar titulo de pantalla2
-    And validar titulo del modulo2
-    And validar titulo de pagina de productos2
-    And Validar imagen del producto2
-    And validar cosecha2
-    And validar fecha2 
-    And validar titulo CTG/CRT2
-    And obtener valor CTG/CRT2
-    And validar titulo Kg Netos2
-    And obtener valor Kg Netos2
+    Given scrollear hasta reporte de entregas del home 
+    Then validar titulo de la pagina en el home
+    And validar titulo del reporte de entregas del home
+    And validar descripcion del producto en el reporte de entregas del home
+    And Validar imagen del producto del reporte de entregas del home
+    And validar cosecha en el reporte de entregas del home
+    And validar fecha del reporte de entregas del home 
+    And validar titulo CTG/CRT del reporte de entregas del home
+    And obtener valor CTG/CRT del reporte de entregas en el home
+    And validar titulo Kg Netos del reporte de entregas en el home
+    And obtener valor Kg Netos del reporte de entregas en el home
 
   @ValidarVentasRecientes
   Scenario: validar las ventas recientes en el home
-    Given validar titulo del modulo3
-    And validar titulo de pagina de productos3
-    And Validar imagen del producto3
-    And validar cosecha3
-    And validar fecha3 
-    And validar titulo Kg Netos3
-    And obtener valor Kg Netos3
-    And validar titulo precio3
-    And obtener precio3
-    And obtener valor final3 
+    Given validar titulo del reporte de las ventas del home
+    Then validar titulo del producto en el reporte de ventas del home
+    And Validar imagen del producto del reporte de ventas del home
+    And validar cosecha en el reporte de ventas del home
+    And validar fecha del reporte de ventas del home 
+    And validar titulo Kg Netos del reporte de ventas del home
+    And obtener valor Kg Netos del reporte de ventas del home
+    And validar titulo precio del reportes de ventas del home
+    And obtener precio del reporte de ventas en del home
+    
     

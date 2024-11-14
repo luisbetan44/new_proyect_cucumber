@@ -2,14 +2,14 @@ from behave import given, when, then
 import time
 from elements import validate_character_numeric_element,  validate_image_css_selector,  validate_text
 from elements2 import validate_character_string_element
-from selecctores import Selecctores
+from selectores import Selectores
 from textSteps import TextSteps
 from loginHelper import LoginSteps3
 
 
 
 star_sesion =  TextSteps.HELPER_START_SESSION
-url = Selecctores.PAGE_HOME_STAGING_GD_XPAHT
+url = Selectores.PAGE_HOME_STAGING_GD_XPAHT
 isert_user_pass = TextSteps.HELPER_INSERT_USERNAME_AND_PASSWORD
 click_button = TextSteps.HELPER_CLICK_ON_THE_BUTTON_SESSION
 redireccion_pege = TextSteps.HELPER_REDIRRECT_ME_TO_THE_MAIN_PAGE
@@ -38,6 +38,8 @@ validate_title_kgnetos_sales = TextSteps.VALIDATE_TITLE_KG_NETOS_SALES_HOME
 get_kgnetos_sales = TextSteps.GET_VALUE_KG_NETOS_SALES_HOME 
 validate_title_price_sales = TextSteps.VALDATE_TITLE_PRICE_SALES_HOME 
 get_price_sales = TextSteps.GET_VALUE_PRICE_SALES_HOME
+scroll_half_page = Selectores.SROLLE_HALF_PAGE
+validate_title_page_deliveries_home_xpaht = Selectores.VALIDATE_TITLE_PEGE_DELIVERIES_HOME_XPAHT
    
 
 
@@ -91,7 +93,7 @@ def step_impl(context):
 
 @given(scroll_page)
 def step_impl(context):
-    context.browser.execute_script("window.scrollTo(0, 1000);")
+    context.browser.execute_script(scroll_half_page)
     time.sleep(2)
 
 
@@ -99,7 +101,7 @@ def step_impl(context):
 
 @then(validate_title_page)
 def step_impl(context):
-    titlle_value1 = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[1]/p'
+    titlle_value1 = validate_title_page_deliveries_home_xpaht
     value_expected1= "Entregas y Ventas Recientes"
     validate_text(context.browser,titlle_value1, value_expected1)
 

@@ -17,3 +17,5 @@ class Credenciales:
   DON_EMIDIO_GD = "484"
   EL_DON_SA_GD = "177"
   BORETTO_GD = "464" 
+
+# titulos y valores de reporte de entregas y ventas  del home 

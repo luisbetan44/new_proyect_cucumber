@@ -1,4 +1,4 @@
-class Selecctores:
+class Selectores:
 
 # URL de los ambientes
 
@@ -9,7 +9,12 @@ class Selecctores:
   PAGE_HOME_UAT_GD_XPAHT = "https://pwa-portal-gaviglio-uat.silohub.ag/login"
 
 
+# selecctores del reporte de entregas y ventas del home 
 
+# entregas 
+  VALIDATE_TITLE_PEGE_DELIVERIES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[1]/p'
+
+#ventas 
 
 
 # selecctores de imagenes en la plataforma
@@ -36,6 +41,8 @@ class Selecctores:
   SCROLLUP = "window.scrollTo(0, -500);"
 
   SCROLLSAMPLE = "window.scrollBy(0, 250);"
+
+  SROLLE_HALF_PAGE = "window.scrollTo(0, 1000);"
 
   # selectores de menu 
 

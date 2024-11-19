@@ -4,85 +4,84 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+from elements import validate_character_numeric_element,validate_image_xpaht, validate_values_text
+from credenciales import Credenciales
+from loginHelper import LoginSteps3
+from textSteps import TextSteps
+from selectores import Selectores
+
+## credenciales 
+username = Credenciales.USERNAME_ADMIN_GD
+password = Credenciales.PASSWORD_ADMIN_GD
+account_producer = Credenciales.JUAN_DEMO_GD
+account_producer = Credenciales.JUAN_DEMO_GD
+
+## pasos 
+star_sesion =  TextSteps.HELPER_START_SESSION
+isert_user_pass = TextSteps.HELPER_INSERT_USERNAME_AND_PASSWORD
+click_button = TextSteps.HELPER_CLICK_ON_THE_BUTTON_SESSION
+redireccion_pege = TextSteps.HELPER_REDIRRECT_ME_TO_THE_MAIN_PAGE
+select_tenant = TextSteps.HELPER_SELECT_TENANT_WHERE_I_WANT_TO_ENTER
+enter_home_page = TextSteps.HELPER_ENTER_THE_HOME_PAGE
+select_global_search = TextSteps.HELPER_SELECT_GLOBAL_SEARCH
+insert_account = TextSteps.HELPER_INSERT_ACCOUNT_SEARCH
+click_option = TextSteps.HELPER_CLICK_OPTION_ACCOUNT
 
 
-from elements import validate_character_numeric_element,validate_image_xpaht, validate_text, validate_values_text
+## Selectores 
+
+url = Selectores.PAGE_HOME_STAGING_GD_XPAHT
+scroll_half_page = Selectores.SROLLE_HALF_PAGE
 
 
-
-
-@given('estoy en la pagina de inicio de sesion3')
+@given(star_sesion)
 def step_impl(context):
-    context.browser.get("https://pwa-portal-staging.silohub.ag/login")
-    print("Navegó a la página de inicio de sesión")
+    login_steps = LoginSteps3(context.browser)
+    login_steps.navigate_to_login_page(url)
 
-@when('ingreso mi nombre de usuario y credenciales correctas3')
+@when(isert_user_pass)
 def step_impl(context):
-    print("Buscando campo de email")
-    context.browser.find_element(By.ID, "email").send_keys("admingd@silohub.ag")
-    print("Buscando campo de contraseña")
-    context.browser.find_element(By.ID, "password").send_keys("G@viglio123")
+    login_steps = LoginSteps3(context.browser)
+    login_steps.enter_credentials(username, password)
 
-@when('hago clic en el boton de inicio de sesion3')
+@when(click_button)
 def step_impl(context):
-    print("Buscando botón de inicio de sesión")
-    context.browser.find_element(By.XPATH, "/html/body/app-root/app-login-main/div/div[2]/div/app-login-form/div/div/div[1]/div/div[2]/form/div[4]/app-button/button").click()
-    time.sleep(2)
+    login_steps = LoginSteps3(context.browser)
+    login_steps.click_login_button()
 
-@then('deberia ser redirigido a la pagina principal3')
+@then(redireccion_pege)
 def step_impl(context):
-    try:
-        WebDriverWait(context.browser, 10).until(EC.url_contains("home"))
-        current_url = context.browser.current_url
-        print("URL actual:", current_url)
-        assert "home" in current_url  # Verifica que 'home' esté en la URL actual
-    except Exception as e:
-        print("Error:", e)
-        raise AssertionError("No se redirigió a la página principal")
-    
-@given('selecciono el tenant donde quiero ingresar3')
-def step_impl(context):
-    print("Buscando botón de inicio de sesión")
-    context.browser.find_element(By.XPATH, "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-main/div/div[1]/app-tenant-main/app-tenant[8]/div/div/img").click()
-    time.sleep(2)
+    login_steps = LoginSteps3(context.browser)
+    login_steps.verify_redirection_to_home()
 
-@then('ingreso a la pagina de inicio3')
+@given(select_tenant)
 def step_impl(context):
-    try:
-        WebDriverWait(context.browser, 10).until(EC.url_contains("inicio"))
-        current_url = context.browser.current_url
-        print("URL actual:", current_url)
-        assert "inicio" in current_url  # Verifica que 'home' esté en la URL actual
-    except Exception as e:
-        print("Error:", e)
-        raise AssertionError("No se redirigió a la página principal")
-    time.sleep(10)
+    login_steps = LoginSteps3(context.browser)
+    login_steps.select_tenant()
 
-
-@given('seleccionar al buscador global3')
+@then(enter_home_page)
 def step_impl(context):
-    context.browser.find_element(By.ID, "search-options").click()
-    time.sleep(2)   
-    
+    login_steps = LoginSteps3(context.browser)
+    login_steps.verify_redirection_to_inicio()
 
-@when('ingreso numero de cuenta en el buscador global3')
+@given(select_global_search)
 def step_impl(context):
-    input_element = WebDriverWait(context.browser, 10).until(EC.visibility_of_element_located((By.ID, "search-options")))
-    input_element.send_keys("1023")
-    time.sleep(2)  # Esperar a que las opciones se carguen
+    login_steps = LoginSteps3(context.browser)
+    login_steps.click_global_search()
 
-@when('hago clic en la opción desplegada correspondiente3')
+@when(insert_account)
 def step_impl(context):
-    element_to_click = WebDriverWait(context.browser, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#search-dropdown > app-accounts-list > ngx-simplebar > div.simplebar-wrapper > div.simplebar-mask > div > div > div > div > div.dropdown-sub-item.accounts-numbers")))
-    context.browser.execute_script("arguments[0].style.display = 'block';", element_to_click)
-    element_to_click.click()
+    login_steps = LoginSteps3(context.browser)
+    login_steps.enter_account_number(account_producer)
+
+@when(click_option)
+def step_impl(context):
+    login_steps = LoginSteps3(context.browser)
+    login_steps.click_suggested_option()
     time.sleep(5)
 
-@then('el sistema muestra mensaje de bienvenida3')
-def step_impl(context):
-    element_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/app-welcome-home/div/div[1]/div/p"
-    expected_message = "Buen día JUAN DEMO!"  
-    validate_text(context.browser, element_obtained, expected_message)
+
+
 
 @given('validar imagen del producto')
 def step_impl(context):

@@ -14,10 +14,8 @@ class LoginSteps3:
         print("Navegó a la página de inicio de sesión")
 
     def enter_credentials(self, username, password):
-        print("Buscando campo de email")
-        self.browser.find_element(By.ID, "email").send_keys(username)
-        print("Buscando campo de contraseña")
-        self.browser.find_element(By.ID, "password").send_keys(password)
+       self.browser.find_element(By.ID, "email").send_keys(username)
+       self.browser.find_element(By.ID, "password").send_keys(password)
 
     def click_login_button(self):
         print("Buscando botón de inicio de sesión")

@@ -12,9 +12,50 @@ class Selectores:
 # selecctores del reporte de entregas y ventas del home 
 
 # entregas 
-  VALIDATE_TITLE_PEGE_DELIVERIES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[1]/p'
+
+  SELECT_TITLE_PEGE_DELIVERIES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[1]/p'
+  
+  SELECT_TITLE_MODULE_DELIVERIES_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/div/span[1]"
+
+  SELECT_TITLE_PEGE_PRODUCT_DELIVERIES_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/thead/tr/th[1]"
+
+  SELECT_IMG_PRODUCT_DELIVERIES_HOME_SELECTOR = "#layout-wrapper > div > div > div > app-home-switch > app-home-v2 > div > div:nth-child(4) > app-recent-grain-movements > div:nth-child(2) > div:nth-child(1) > app-recent-deliveries > app-responsive-table-multiple-items > div > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div > div.me-2 > img"
+  
+  SELECT_HARVEST_DELIVERIES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[1]/div/div/div[2]/div[1]/span'
+
+  SELECT_VALUE_DATE_DELIVERIES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[1]/div/div/div[2]/div[2]/span'
+
+  SELECT_TITLE_CTGCRT_DELIVERIES_HOME_XPAH = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/thead/tr/th[2]"
+  
+  SELECT_VALUE_CTGCRT_DELIVERIES_HOME_XPAH = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[2]/div/div/span'
+
+  SELECT_VALUE_TITLE_KGNETOS_DELIVERIES_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/thead/tr/th[3]"
+
+  SELECT_VALUE_KGNETOS_DELIVERIES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[1]/app-recent-deliveries/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[3]/div/div/span'
+
 
 #ventas 
+
+  SELECT_TITLE_MODULE_SALES_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/div/span[1]"
+
+  SELECT_TITLE_PEGE_PRODUCT_SALES_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/thead/tr/th[1]"
+
+  SELECT_IMG_PRODUCT_SALES_HOME_SELECTOR = "#layout-wrapper > div > div > div > app-home-switch > app-home-v2 > div > div:nth-child(4) > app-recent-grain-movements > div:nth-child(2) > div:nth-child(2) > app-recent-sales > app-responsive-table-multiple-items > div > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div > div.me-2 > img"
+  
+  SELECT_HARVEST_SALES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[1]/div/div/div[2]/div[1]/span'
+
+  SELECT_VALUE_DATE_SALES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[1]/div/div/div[2]/div[2]/span'
+
+  SELECT_VALUE_TITLE_KGNETOS_SALES_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/thead/tr/th[2]"
+
+  SELECT_VALUE_KGNETOS_SALES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[2]/div/div/span'
+
+  SELECT_VALUE_TITLE_PRICE_SALES_HOME_XPAHT =  "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/thead/tr/th[3]"
+
+  SELECT_VALUE_PRICE_SALES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[3]/div/div/span[1]'
+
+
+
 
 
 # selecctores de imagenes en la plataforma

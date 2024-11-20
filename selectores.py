@@ -55,7 +55,64 @@ class Selectores:
   SELECT_VALUE_PRICE_SALES_HOME_XPAHT = '/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[3]/app-recent-grain-movements/div[2]/div[2]/app-recent-sales/app-responsive-table-multiple-items/div/table/tbody/tr[1]/td[3]/div/div/span[1]'
 
 
+## slectores del reporte de resumen de mis negocios del home 
 
+  SELECT_BUTTON_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME_XPAHT = "//span[contains(text(),' Filtros')]"
+
+  SELECT_BUTTON_CLEAN_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME_XPAHT ="//div[contains(text(), '24/25')]"
+
+  SELECT_HARVEST_SUMMARY_BUSINESS_HOME_XPAHT = '/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-season-container/div/app-season-button[2]/div/div'
+
+  SELECT_BUTTON_ACCEPT_SUMMARY_BUSINESS_HOME_XPAHT = '/html/body/ngb-offcanvas-panel/div/ngx-simplebar/div[1]/div[2]/div/div/div/app-filter-content/div[2]/app-filter-buttons/div/app-button[2]/button/span'
+
+  SELECT_VALUE_TITLE_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[1]/div[1]/div/p" 
+
+  SELECT_IMG_PRODUCT_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[1]/div/img" 
+
+  SELECT_VALUE_DESCRIPTION_PRODUCT_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[1]/div/div/div[1]/span"
+
+  SELECT_VALUE_BALANCE_AVAILABLE_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[1]/div/div/div[2]/span"
+
+  SELECT_VALUE_TITLE_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[2]/app-indicator-card/div/div[2]/div[1]/div[1]"
+
+  SELECT_VALUE_AMOUNT_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[2]/app-indicator-card/div/div[2]/div[1]/div[2]" 
+
+  SELECT_VALUE_TITLE_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[2]/app-indicator-card/div/div[2]/div[2]/div[1]" 
+
+  SELECT_VALUE_AMOUNT_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[2]/app-indicator-card/div/div[2]/div[2]/div[2]"
+
+  SELECT_VALUE_TITLE_FIXED_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[3]/app-indicator-card/div/div[2]/div[1]/div[1]"
+
+  SELECT_VALUE_AMOUNT_FIXED_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[3]/app-indicator-card/div/div[2]/div[1]/div[2]"
+
+  SELECT_VALUE_TITLE__PENDING_FIXED_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[3]/app-indicator-card/div/div[2]/div[2]/div[1]" 
+
+  SELECT_VALUE_AMOUNT_PENDING_FIXED_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[3]/app-indicator-card/div/div[2]/div[2]/div[2]"
+
+  SELECT_VALUE_TITLE_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[4]/app-indicator-card/div/div[2]/div[1]/div[1]"
+
+  SELECT_VALUE_AMOUNT_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[4]/app-indicator-card/div/div[2]/div[1]/div[2]"
+
+  SELECT_VALUE_TITLE__PENDING_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[4]/app-indicator-card/div/div[2]/div[2]/div[1]"
+
+  SELECT_VALUE_AMOUNT_PENDING_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[4]/app-indicator-card/div/div[2]/div[2]/div[2]"
+
+  SELECT_VALUE_TITLE_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[5]/app-indicator-card/div/div[2]/div[1]/div[1]"
+
+  SELECT_VALUE_AMOUNT_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[5]/app-indicator-card/div/div[2]/div[1]/div[2]"
+
+  SELECT_VALUE_TITLE__PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[5]/app-indicator-card/div/div[2]/div[2]/div[1]"
+
+  SELECT_VALUE_AMOUNT_PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[5]/app-indicator-card/div/div[2]/div[2]/div[2]"
+
+  SELECT_VALUE_TITLE_PAID_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[6]/app-indicator-card/div/div[2]/div[1]/div[1]"
+
+  SELECT_VALUE_AMOUNT_PAID_SUMMARY_BUSINESS_HOME_XPAHT = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[6]/app-indicator-card/div/div[2]/div[1]/div[2]"
+
+  SELECT_VALUE_TITLE_PENDING__PAID_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[5]/app-indicator-card/div/div[2]/div[2]/div[1]"
+
+  SELECT_VALUE_AMOUNT_PENDING__PAID_SUMMARY_BUSINESS_HOME_XPAHT ="/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home-switch/app-home-v2/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[6]/app-indicator-card/div/div[2]/div[2]/div[2]" 
+   
 
 
 # selecctores de imagenes en la plataforma

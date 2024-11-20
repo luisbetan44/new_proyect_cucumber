@@ -4,9 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from elements import validate_character_numeric_element,validate_image_xpaht, validate_values_text
+from elements import find_elements, validate_character_numeric_element,validate_image_xpaht, validate_text, validate_values_text
 from credenciales import Credenciales
-from loginHelper import LoginSteps3
+
 from textSteps import TextSteps
 from selectores import Selectores
 
@@ -15,6 +15,14 @@ username = Credenciales.USERNAME_ADMIN_GD
 password = Credenciales.PASSWORD_ADMIN_GD
 account_producer = Credenciales.JUAN_DEMO_GD
 account_producer = Credenciales.JUAN_DEMO_GD
+value_title_modal_summary_business = Credenciales.VALUE_TITLE_MODAL_SUMMARY_BUSINESS
+value_title_column_deliveries = Credenciales.VALUE_TITLE_COLUMN_DELIVERIES
+value_title_column_pending = Credenciales.VALUE_TITLE_COLUMN_PENDING
+value_title_column_fixed = Credenciales.VALUE_TITLE_COLUMN_FIXED
+value_title_column_weighed = Credenciales.VALUE_TITLE_COLUMN_WEIGHED
+value_title_column_liquidated = Credenciales.VALUE_TITLE_COLUMN_LIQUIDATED
+value_title_column_paid = Credenciales.VALUE_TITLE_COLUMN_PAID
+grain_soy = Credenciales.GRAIN_SOY
 
 ## pasos 
 star_sesion =  TextSteps.HELPER_START_SESSION
@@ -26,125 +34,251 @@ enter_home_page = TextSteps.HELPER_ENTER_THE_HOME_PAGE
 select_global_search = TextSteps.HELPER_SELECT_GLOBAL_SEARCH
 insert_account = TextSteps.HELPER_INSERT_ACCOUNT_SEARCH
 click_option = TextSteps.HELPER_CLICK_OPTION_ACCOUNT
+select_button_filter_campaign = TextSteps.SELECT_BUTTON_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME
+clean_filter_campaign = TextSteps.CLEAN_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME
+select_harvest_filter = TextSteps.SELECT_HARVEST_SUMMARY_BUSINESS_HOME
+select_button_accept_filter = TextSteps.SELECT_BUTTON_ACCEPT_SUMMARY_BUSINESS_HOME
+validate_title_summary_business_home = TextSteps.VALIDATE_TITLE_SUMMARY_BUSINESS_HOME
+validate_img_product_summary_business_home = TextSteps.VALIDATE_IMG_PRODUCT_SUMMARY_BUSINESS_HOME
+validate_description_product_summary_business_home = TextSteps.VALIDATE_DESCRIPTION_PRODUCT_SUMMARY_BUSINESS_HOME
+validate_balance_available_summary_business_home = TextSteps.VALIDATE_BALANCE_AVAILABLE_SUMMARY_BUSINESS_HOME
+validate_title_delivery_summary_business_home = TextSteps.VALIDATE_TITLE_DELIVERY_SUMMARY_BUSINESS_HOME
+validate_amount_delivery_summary_business_home = TextSteps.VALIDATE_AMOUNT_DELIVERY_SUMMARY_BUSINESS_HOME
+validate_title_pending_delivery_summary_business_home = TextSteps.VALIDATE_TITLE_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME
+validate_amount_pending_delivery_summary_business_home = TextSteps.VALIDATE_AMOUNT_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME
+validate_title_fixed_summary_business_home = TextSteps.VALIDATE_TITLE_FIXED_SUMMARY_BUSINESS_HOME
+validate_amount_fixed_summary_business_home = TextSteps.VALIDATE_AMOUNT_FIXED_SUMMARY_BUSINESS_HOME
+validate_title_pending_fixed_summary_business_home = TextSteps.VALIDATE_TITLE__PENDING_FIXED_SUMMARY_BUSINESS_HOME
+validate_amount_pending_fixed_summary_business_home = TextSteps.VALIDATE_AMOUNT_PENDING_FIXED_SUMMARY_BUSINESS_HOME
+validate_title_weighed_summary_business_home = TextSteps.VALIDATE_TITLE_WEIGHED_SUMMARY_BUSINESS_HOME
+validate_amount_weighed_summary_business_home = TextSteps.VALIDATE_AMOUNT_WEIGHED_SUMMARY_BUSINESS_HOME
+validate_title_pending_weighed_summary_business_home = TextSteps.VALIDATE_TITLE__PENDING_WEIGHED_SUMMARY_BUSINESS_HOME
+validate_amount_pending_weighed_summary_business_home = TextSteps.VALIDATE_AMOUNT_PENDING_WEIGHED_SUMMARY_BUSINESS_HOME
+validate_title_liquidated_summary_business_home = TextSteps.VALIDATE_TITLE_LIQUIDATED_SUMMARY_BUSINESS_HOME
+validate_amount_liquidated_summary_business_home = TextSteps.VALIDATE_AMOUNT_LIQUIDATED_SUMMARY_BUSINESS_HOME
+validate_title_pending_liquidated_summary_business_home = TextSteps.VALIDATE_TITLE__PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME
+validate_amount_pending_liquidated_summary_business_home = TextSteps.VALIDATE_AMOUNT_PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME
+validate_title_paid_summary_business_home = TextSteps.VALIDATE_TITLE_PAID_SUMMARY_BUSINESS_HOME
+validate_amount_paid_summary_business_home = TextSteps.VALIDATE_AMOUNT_PAID_SUMMARY_BUSINESS_HOME
+validate_title_pending_paid_summary_business_home = TextSteps.VALIDATE_TITLE_PENDING__PAID_SUMMARY_BUSINESS_HOME
+validate_amount_pending_paid_summary_business_home = TextSteps.VALIDATE_AMOUNT_PENDING__PAID_SUMMARY_BUSINESS_HOME
+
 
 
 ## Selectores 
 
 url = Selectores.PAGE_HOME_STAGING_GD_XPAHT
 scroll_half_page = Selectores.SROLLE_HALF_PAGE
+select_button_filter_campaign_xpaht = Selectores.SELECT_BUTTON_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME_XPAHT
+select_button_clean_filter_xpaht = Selectores.SELECT_BUTTON_CLEAN_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME_XPAHT
+select_harvest_xpaht = Selectores.SELECT_HARVEST_SUMMARY_BUSINESS_HOME_XPAHT
+select_button_accept_filter_xpaht = Selectores.SELECT_BUTTON_ACCEPT_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_SUMMARY_BUSINESS_HOME_XPAHT
+select_img_product_summary_business_home_xpaht = Selectores.SELECT_IMG_PRODUCT_SUMMARY_BUSINESS_HOME_XPAHT
+img_grain_wheat =Selectores.IMG_GRAIN_WHEAT 
+img_grain_corn = Selectores.IMG_GRAIN_CORN 
+img_grain_soy = Selectores.IMG_GRAIN_SOY 
+img_grain_sunflower = Selectores.IMG_GRAIN_SUNFLOWER
+select_value_description_product_summary_business_home_xpaht = Selectores.SELECT_VALUE_DESCRIPTION_PRODUCT_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_balance_available_summary_business_home_xpaht = Selectores.SELECT_VALUE_BALANCE_AVAILABLE_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_delivery_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_delivery_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_pending_delivery_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_pending_delivery_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_fixed_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_FIXED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_fixed_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_FIXED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_pending_fixed_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE__PENDING_FIXED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_pending_fixed_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_PENDING_FIXED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_weighed_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_weighed_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_pending_weighed_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE__PENDING_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_pending_weighed_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_PENDING_WEIGHED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_liquidated_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_liquidated_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_pending_liquidated_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE__PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_pending_liquidated_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_paid_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_PAID_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_paid_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_PAID_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_title_pending_paid_summary_business_home_xpaht = Selectores.SELECT_VALUE_TITLE_PENDING__PAID_SUMMARY_BUSINESS_HOME_XPAHT
+select_value_amount_pending_paid_summary_business_home_xpaht = Selectores.SELECT_VALUE_AMOUNT_PENDING__PAID_SUMMARY_BUSINESS_HOME_XPAHT
 
 
-@given(star_sesion)
+
+
+
+@given(select_button_filter_campaign)
 def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.navigate_to_login_page(url)
+    Filter_campaign = select_button_filter_campaign_xpaht
+    find_elements(context.browser, Filter_campaign)
+    time.sleep(1)
+   
 
-@when(isert_user_pass)
+@when(clean_filter_campaign)
 def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.enter_credentials(username, password)
-
-@when(click_button)
-def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.click_login_button()
-
-@then(redireccion_pege)
-def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.verify_redirection_to_home()
-
-@given(select_tenant)
-def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.select_tenant()
-
-@then(enter_home_page)
-def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.verify_redirection_to_inicio()
-
-@given(select_global_search)
-def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.click_global_search()
-
-@when(insert_account)
-def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.enter_account_number(account_producer)
-
-@when(click_option)
-def step_impl(context):
-    login_steps = LoginSteps3(context.browser)
-    login_steps.click_suggested_option()
-    time.sleep(5)
-
-
-
-
-@given('validar imagen del producto')
-def step_impl(context):
-    img_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[1]/div/img"
-    img_expected = ["https://pwa-portal-staging.silohub.ag/assets/images/grains/trigo.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/maiz.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/girasol.svg",
-                    "https://pwa-portal-staging.silohub.ag/assets/images/grains/soja.svg"]
-    validate_image_xpaht(context.browser, img_obtained, img_expected)
-
-@then('validar descripcion del producto')
-def step_impl(context):
-    description_obtained = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[1]/div/span"
-    description_expected = ["Soja","Maiz","Trigo"]
-    validate_values_text(context.browser, description_obtained, description_expected)
-
-@then('validar la cantidad entregada')
-def step_impl(context):
-    value_delivery = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[2]/app-indicator-card/div/div[2]/div[1]/div[2]"
-    validate_character_numeric_element(context.browser, value_delivery)
+    delete_campaign = select_button_clean_filter_xpaht
+    find_elements(context.browser, delete_campaign)
     time.sleep(2)
 
-@then('validar la cantidad pendiente de entregar')
+@when(select_harvest_filter)
 def step_impl(context):
-    value_delivery_pending = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[2]/app-indicator-card/div/div[2]/div[2]/div[2]"
-    validate_character_numeric_element(context.browser, value_delivery_pending)
-    time.sleep(2)
+    select_campaign = select_harvest_xpaht
+    find_elements(context.browser, select_campaign)
 
-@then('validar cantidad fijada')
+@when(select_button_accept_filter)
 def step_impl(context):
-    value_fixed = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[3]/app-indicator-card/div/div[2]/div[1]/div[2]"
-    validate_character_numeric_element(context.browser, value_fixed)
-    time.sleep(2)
+    selecct_button_aplicar = select_button_accept_filter_xpaht
+    find_elements(context.browser, selecct_button_aplicar)
+    time.sleep(6)
 
-@then('validar cantidad pendiente de fijar')
+@then(validate_title_summary_business_home)
 def step_impl(context):
-    value_fixed_pending = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[3]/app-indicator-card/div/div[2]/div[2]/div[2]"
-    validate_character_numeric_element(context.browser, value_fixed_pending)
-    time.sleep(2)
+  title_expected = select_value_title_summary_business_home_xpaht
+  title_obtained = value_title_modal_summary_business
+  validate_text(context.browser, title_expected,title_obtained)
 
-@then('validar cantidad pesificada')
+@then(validate_img_product_summary_business_home)
 def step_impl(context):
-    value_pesificado = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[4]/app-indicator-card/div/div[2]/div[1]/div[2]"
-    validate_character_numeric_element(context.browser, value_pesificado)
-    time.sleep(2)
+   image_1 = select_img_product_summary_business_home_xpaht
+   image_1_expected = [ img_grain_wheat, 
+                        img_grain_corn, 
+                        img_grain_soy, 
+                        img_grain_sunflower 
+            ] 
+   validate_image_xpaht(context.browser, image_1, image_1_expected)
 
-@then('validar cantidad pendiente de pesificar')
-def step_impl(context):
-    value_pesificado_pending = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[4]/app-indicator-card/div/div[2]/div[2]/div[2]"
-    validate_character_numeric_element(context.browser, value_pesificado_pending)
-    time.sleep(2)
 
-@then('validar cantidad liquidada')
+@then(validate_description_product_summary_business_home )
 def step_impl(context):
-    value_liquidated = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[5]/app-indicator-card/div/div[2]/div[1]/div[2]"
-    validate_character_numeric_element(context.browser, value_liquidated)
-    time.sleep(2)
+    titlle_value1 = select_value_description_product_summary_business_home_xpaht
+    value_expected1 = grain_soy
+    validate_text(context.browser, titlle_value1, value_expected1)
 
-@then('validar cantidad pendiente de liquidar')
+@then(validate_balance_available_summary_business_home)
 def step_impl(context):
-    value_liquidated_pending = "/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-home/div/div[2]/app-business-indicators/div[2]/swiper[1]/div/div[1]/div[5]/app-indicator-card/div/div[2]/div[2]/div[2]"
-    validate_character_numeric_element(context.browser, value_liquidated_pending)
-    time.sleep(2)
+     element1 = select_value_balance_available_summary_business_home_xpaht
+     validate_character_numeric_element(context.browser, element1  )
+
+
+
+
+@then(validate_title_delivery_summary_business_home)
+def step_impl(context):
+    titlle_value2 = select_value_title_delivery_summary_business_home_xpaht
+    value_expected2 = value_title_column_deliveries
+    validate_text(context.browser, titlle_value2, value_expected2)
+
+@then(validate_amount_delivery_summary_business_home)
+def step_impl(context):    
+    element2 = select_value_amount_delivery_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element2  )
+
+@then(validate_title_pending_delivery_summary_business_home)
+def step_impl(context):
+    titlle_value3 = select_value_title_pending_delivery_summary_business_home_xpaht
+    value_expected3 =value_title_column_pending
+    validate_text(context.browser, titlle_value3, value_expected3)
+
+@then(validate_amount_pending_delivery_summary_business_home)
+def step_impl(context):    
+    element3 = select_value_amount_pending_delivery_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element3  )
+
+       
+@then(validate_title_fixed_summary_business_home)
+def step_impl(context):       
+    titlle_value4 = select_value_title_fixed_summary_business_home_xpaht
+    value_expected4 =value_title_column_fixed
+    validate_text(context.browser, titlle_value4, value_expected4)
+   
+        
+@then(validate_amount_fixed_summary_business_home)
+def step_impl(context):
+    element4 = select_value_amount_fixed_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element4  )
+
+@then(validate_title_pending_fixed_summary_business_home)
+def step_impl(context):    
+    titlle_value5 = select_value_title_pending_fixed_summary_business_home_xpaht
+    value_expected5 = value_title_column_pending
+    validate_text(context.browser, titlle_value5, value_expected5)
+
+
+@then(validate_amount_pending_fixed_summary_business_home)
+def step_impl(context):
+    element5 = select_value_amount_pending_fixed_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element5  )
+     
+@then(validate_title_weighed_summary_business_home)
+def step_impl(context):        
+    titlle_value6 = select_value_title_weighed_summary_business_home_xpaht
+    value_expected6 = value_title_column_weighed
+    validate_text(context.browser, titlle_value6, value_expected6)
+        
+@then(validate_amount_weighed_summary_business_home)
+def step_impl(context): 
+    element6 = select_value_amount_weighed_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element6  )
+        
+@then(validate_title_pending_weighed_summary_business_home)
+def step_impl(context):       
+    titlle_value7 = select_value_title_pending_weighed_summary_business_home_xpaht
+    value_expected7 = value_title_column_pending
+    validate_text(context.browser, titlle_value7, value_expected7)
+
+        
+@then(validate_amount_pending_weighed_summary_business_home)
+def step_impl(context):        
+    element7 = select_value_amount_pending_weighed_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element7  )
+
+@then(validate_title_liquidated_summary_business_home)
+def step_impl(context):        
+    titlle_value8 = select_value_title_liquidated_summary_business_home_xpaht
+    value_expected8 = value_title_column_liquidated
+    validate_text(context.browser, titlle_value8, value_expected8)
+
+
+@then(validate_amount_liquidated_summary_business_home)
+def step_impl(context):   
+    element8 = select_value_amount_liquidated_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element8  )
+
+
+@then(validate_title_pending_liquidated_summary_business_home)
+def step_impl(context):
+    titlle_value9 = select_value_title_pending_liquidated_summary_business_home_xpaht
+    value_expected9 = value_title_column_pending
+    validate_text(context.browser, titlle_value9, value_expected9)
+
+
+@then(validate_amount_pending_liquidated_summary_business_home)
+def step_impl(context):
+    element9 = select_value_amount_pending_liquidated_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element9  )
+
+@then(validate_title_paid_summary_business_home)
+def step_impl(context):        
+    titlle_value10 = select_value_title_paid_summary_business_home_xpaht
+    value_expected10 = value_title_column_paid
+    validate_text(context.browser, titlle_value10, value_expected10)
+   
+@then(validate_amount_paid_summary_business_home)
+def step_impl(context):
+    element10 = select_value_amount_paid_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element10  )
+
+        
+@then(validate_title_pending_paid_summary_business_home)
+def step_impl(context):
+    titlle_value11 = select_value_title_pending_paid_summary_business_home_xpaht
+    value_expected11 = value_title_column_pending
+    validate_text(context.browser, titlle_value11, value_expected11)
+   
+@then(validate_amount_pending_paid_summary_business_home)
+def step_impl(context):   
+    element11 = select_value_amount_pending_paid_summary_business_home_xpaht
+    validate_character_numeric_element(context.browser, element11  )
+
 
 def after_scenario(context, scenario):
   if context.browser:

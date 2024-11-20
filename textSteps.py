@@ -80,4 +80,62 @@ class TextSteps:
     VALDATE_TITLE_PRICE_SALES_HOME = "validar titulo precio del reportes de ventas del home"
     
     GET_VALUE_PRICE_SALES_HOME = "obtener precio del reporte de ventas en del home"
+
+## pasos de remumen de mis negocios del home 
+
+    SELECT_BUTTON_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME = "seleccionar boton del filtro del home" 
+
+    CLEAN_FILTER_CAMPAIGN_SUMMARY_BUSINESS_HOME = "limpiar el filtro del home" 
+
+    SELECT_HARVEST_SUMMARY_BUSINESS_HOME = "seleccionar cosecha para el resumen de mis negocios" 
+
+    SELECT_BUTTON_ACCEPT_SUMMARY_BUSINESS_HOME = "seleccionar el boton de acptar del filtro  resumen de mis negocios del home"
+
+    VALIDATE_TITLE_SUMMARY_BUSINESS_HOME = "validar titulo del indicador del  resumen de mis negocios del home"
+
+    VALIDATE_IMG_PRODUCT_SUMMARY_BUSINESS_HOME ="validar imagen del producto del primer movimiento del listado del resumen de mis negocios del home"
+
+    VALIDATE_DESCRIPTION_PRODUCT_SUMMARY_BUSINESS_HOME ="validar descripcion del  producto del listado del resumen de mis negocios del home"
+
+    VALIDATE_BALANCE_AVAILABLE_SUMMARY_BUSINESS_HOME ="validar la  cantidad del saldo disponible del serial del resumen de mis negocios del home"
+    
+    VALIDATE_TITLE_DELIVERY_SUMMARY_BUSINESS_HOME ="validar titulo de entregado del resumen de mis negocios del home"
+
+    VALIDATE_AMOUNT_DELIVERY_SUMMARY_BUSINESS_HOME = "validar la  cantidad de la entrega del resumen de mis negocios del home" 
+
+    VALIDATE_TITLE_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME ="validar el titulo pendientes de entregas del resumen de mis negocios del home" 
+
+    VALIDATE_AMOUNT_PENDING_DELIVERY_SUMMARY_BUSINESS_HOME ="validar la cantidad de pendientes de entregar del resumen de mis negocios del home"
+
+    VALIDATE_TITLE_FIXED_SUMMARY_BUSINESS_HOME = "validar titulo fijados del resumen de mis negocios del home"
+
+    VALIDATE_AMOUNT_FIXED_SUMMARY_BUSINESS_HOME = "validar cantidad de fijados del resumen de mis negocios del home" 
+
+    VALIDATE_TITLE__PENDING_FIXED_SUMMARY_BUSINESS_HOME ="validar titulo pendientes de fijar del resumen de mis negocios del home" 
+
+    VALIDATE_AMOUNT_PENDING_FIXED_SUMMARY_BUSINESS_HOME ="validar cantidad de pendientes de fijar del resumen de mis negocios del home" 
+
+    VALIDATE_TITLE_WEIGHED_SUMMARY_BUSINESS_HOME = "validar titulo pesificado del resumen de mis negocios del home"
+
+    VALIDATE_AMOUNT_WEIGHED_SUMMARY_BUSINESS_HOME = "validar cantidad de pesificar del resumen de mis negocios del home"
+
+    VALIDATE_TITLE__PENDING_WEIGHED_SUMMARY_BUSINESS_HOME ="validar titulo pendiente de pesificar del resumen de mis negocios del home"
+
+    VALIDATE_AMOUNT_PENDING_WEIGHED_SUMMARY_BUSINESS_HOME = "validar cantidad de pendiente de pesificar del resumen de mis negocios del home"
+
+    VALIDATE_TITLE_LIQUIDATED_SUMMARY_BUSINESS_HOME = "validar titulo liquidado del resumen de mis negocios del home"
+
+    VALIDATE_AMOUNT_LIQUIDATED_SUMMARY_BUSINESS_HOME ="validar cantidad de liquidados del resumen de mis negocios del home"
+
+    VALIDATE_TITLE__PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME ="validar titulo pendientes de liquidar del resumen de mis negocios del home"
+
+    VALIDATE_AMOUNT_PENDING_LIQUIDATED_SUMMARY_BUSINESS_HOME ="validar cantidad de pendientes de liquidar del resumen de mis negocios del home" 
+
+    VALIDATE_TITLE_PAID_SUMMARY_BUSINESS_HOME = "validar titulo pagado del resumen de mis negocios del home" 
+    
+    VALIDATE_AMOUNT_PAID_SUMMARY_BUSINESS_HOME = "validar cantidad de pagado del resumen de mis negocios del home"
+
+    VALIDATE_TITLE_PENDING__PAID_SUMMARY_BUSINESS_HOME ="validar titulo de pendientes de pagar del resumen de mis negocios del home"
+
+    VALIDATE_AMOUNT_PENDING__PAID_SUMMARY_BUSINESS_HOME ="validar cantidad de pendientes de pagar del resumen de mis negocios del home" 
    
